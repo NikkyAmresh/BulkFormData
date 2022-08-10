@@ -7,7 +7,7 @@ chai.use(jestSnapshotPlugin());
 
 const { Builder, Key, By, until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
-const service = new chrome.ServiceBuilder("./chromedriver1eebc8c");
+// const service = new chrome.ServiceBuilder("./chromedriver1eebc8c");
 const firefox = require("selenium-webdriver/firefox");
 
 const screen = {
@@ -42,7 +42,9 @@ describe("Root Tests", async () => {
   it("should open the 'The Internet Website'", async () => {
     result = await TheIntenetServices.open(driver);
     assert.equal("The Internet", result.title, "Error getting the title");
-    expect(await result.driver.getPageSource()).toMatchSnapshot();
+    expect(
+      await result.driver.findElement(By.xpath("/html")).getText()
+    ).toMatchSnapshot();
   });
 
   it("it should open the 'Basic Auth' link and authenticate using credentials", async () => {
@@ -57,7 +59,9 @@ describe("Root Tests", async () => {
       text,
       "Error authenticating"
     );
-    expect(await result.driver.getPageSource()).toMatchSnapshot();
+    expect(
+      await result.driver.findElement(By.xpath("/html")).getText()
+    ).toMatchSnapshot();
   });
 
   it("it should open the link 'Sortable Data Tables' and sort the first table by column 'Website'", async () => {
@@ -69,7 +73,9 @@ describe("Root Tests", async () => {
     assert.equal(baseUrl + "tables", newUrl, "Error getting the new URL");
     assert.equal("The Internet", newTitle, "Error getting the Title");
     expect(result.tableText).toMatchSnapshot();
-    expect(await result.driver.getPageSource()).toMatchSnapshot();
+    expect(
+      await result.driver.findElement(By.xpath("/html")).getText()
+    ).toMatchSnapshot();
   });
 });
 
