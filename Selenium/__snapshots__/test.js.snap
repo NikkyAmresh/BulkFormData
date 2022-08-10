@@ -1,0 +1,347 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root Tests it should open the 'Basic Auth' link and authenticate using credentials 1`] = `
+"<html class=\\"no-js\\" lang=\\"en\\"><!--<![endif]--><head>
+    <script src=\\"/js/vendor/298279967.js\\"></script>
+    <meta charset=\\"utf-8\\">
+    <meta name=\\"viewport\\" content=\\"width=device-width\\">
+    <title>The Internet</title>
+    <link href=\\"/css/app.css\\" rel=\\"stylesheet\\">
+    <link href=\\"/css/font-awesome.css\\" rel=\\"stylesheet\\">
+    <script src=\\"/js/vendor/jquery-1.11.3.min.js\\"></script>
+    <script src=\\"/js/vendor/jquery-ui-1.11.4/jquery-ui.js\\"></script>
+    <script src=\\"/js/foundation/foundation.js\\"></script><meta class=\\"foundation-mq-small\\"><meta class=\\"foundation-mq-medium\\"><meta class=\\"foundation-mq-large\\"><style></style>
+    <script src=\\"/js/foundation/foundation.alerts.js\\"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </head>
+  <body>
+    <div class=\\"row\\">
+      <div id=\\"flash-messages\\" class=\\"large-12 columns\\">
+      
+        
+      
+        
+      
+        
+      
+      </div>
+    </div>
+    <div class=\\"row\\">
+      <a href=\\"https://github.com/tourdedave/the-internet\\"><img style=\\"position: absolute; top: 0; right: 0; border: 0;\\" src=\\"/img/forkme_right_green_007200.png\\" alt=\\"Fork me on GitHub\\"></a>
+      <div id=\\"content\\" class=\\"large-12 columns\\">
+        <div class=\\"example\\">
+  <h3>Basic Auth</h3>
+  <p>
+    Congratulations! You must have the proper credentials.
+  </p>
+</div>
+
+      </div>
+    </div>
+    <div id=\\"page-footer\\" class=\\"row\\">
+      <div class=\\"large-4 large-centered columns\\">
+        <hr>
+        <div style=\\"text-align: center;\\">Powered by <a target=\\"_blank\\" href=\\"http://elementalselenium.com/\\">Elemental Selenium</a></div>
+      </div>
+    </div>
+  
+
+</body></html>"
+`;
+
+exports[`Root Tests it should open the link 'Sortable Data Tables' and sort the first table by column 'Website' 1`] = `
+"Last Name First Name Email Due Web Site Action
+Bach Frank fbach@yahoo.com $51.00 http://www.frank.com edit delete
+Doe Jason jdoe@hotmail.com $100.00 http://www.jdoe.com edit delete
+Smith John jsmith@gmail.com $50.00 http://www.jsmith.com edit delete
+Conway Tim tconway@earthlink.net $50.00 http://www.timconway.com edit delete"
+`;
+
+exports[`Root Tests it should open the link 'Sortable Data Tables' and sort the first table by column 'Website' 2`] = `
+"<html class=\\"no-js\\" lang=\\"en\\"><!--<![endif]--><head>
+    <script src=\\"/js/vendor/298279967.js\\"></script>
+    <meta charset=\\"utf-8\\">
+    <meta name=\\"viewport\\" content=\\"width=device-width\\">
+    <title>The Internet</title>
+    <link href=\\"/css/app.css\\" rel=\\"stylesheet\\">
+    <link href=\\"/css/font-awesome.css\\" rel=\\"stylesheet\\">
+    <script src=\\"/js/vendor/jquery-1.11.3.min.js\\"></script>
+    <script src=\\"/js/vendor/jquery-ui-1.11.4/jquery-ui.js\\"></script>
+    <script src=\\"/js/foundation/foundation.js\\"></script><meta class=\\"foundation-mq-small\\"><meta class=\\"foundation-mq-medium\\"><meta class=\\"foundation-mq-large\\"><style></style>
+    <script src=\\"/js/foundation/foundation.alerts.js\\"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </head>
+  <body>
+    <div class=\\"row\\">
+      <div id=\\"flash-messages\\" class=\\"large-12 columns\\">
+      
+        
+      
+        
+      
+        
+      
+      </div>
+    </div>
+    <div class=\\"row\\">
+      <a href=\\"https://github.com/tourdedave/the-internet\\"><img style=\\"position: absolute; top: 0; right: 0; border: 0;\\" src=\\"/img/forkme_right_green_007200.png\\" alt=\\"Fork me on GitHub\\"></a>
+      <div id=\\"content\\" class=\\"large-12 columns\\">
+        <script src=\\"/js/vendor/jquery.tablesorter.min.js\\"></script>
+<script>
+$(function(){
+  $(\\"#table1\\").tablesorter();
+  $(\\"#table2\\").tablesorter();
+});
+</script>
+<style>
+  span {
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+  }
+  .tablesorter-headerAsc span   { background-image: url('img/down-arrow.png');  }
+  .tablesorter-headerDesc span  { background-image: url('img/up-arrow.png');    }
+</style>
+<div class=\\"example\\">
+  <h3>Data Tables</h3>
+  <p>Often times when you see a table it contains data which is sortable -- sometimes with actions that can be taken within each row (e.g. edit, delete). And it can be challenging to automate interaction with sets of data in a table depending on how it is constructed.</p>
+
+  <h4>Example 1</h4>
+  <p>No Class or ID attributes to signify groupings of rows and columns</p>
+  <table id=\\"table1\\" class=\\"tablesorter\\">
+    <thead>
+      <tr>
+        <th class=\\"header\\"><span>Last Name</span></th>
+        <th class=\\"header\\"><span>First Name</span></th>
+        <th class=\\"header\\"><span>Email</span></th>
+        <th class=\\"header\\"><span>Due</span></th>
+        <th class=\\"header headerSortDown\\"><span>Web Site</span></th>
+        <th class=\\"header\\"><span>Action</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      
+      
+      
+    <tr>
+        <td>Bach</td>
+        <td>Frank</td>
+        <td>fbach@yahoo.com</td>
+        <td>$51.00</td>
+        <td>http://www.frank.com</td>
+        <td>
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr><tr>
+        <td>Doe</td>
+        <td>Jason</td>
+        <td>jdoe@hotmail.com</td>
+        <td>$100.00</td>
+        <td>http://www.jdoe.com</td>
+        <td>
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr><tr>
+        <td>Smith</td>
+        <td>John</td>
+        <td>jsmith@gmail.com</td>
+        <td>$50.00</td>
+        <td>http://www.jsmith.com</td>
+        <td>
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr><tr>
+        <td>Conway</td>
+        <td>Tim</td>
+        <td>tconway@earthlink.net</td>
+        <td>$50.00</td>
+        <td>http://www.timconway.com</td>
+        <td>
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr></tbody>
+  </table>
+
+  <h4>Example 2</h4>
+  <p>Class and ID attributes to signify groupings of rows and columns</p>
+  <table id=\\"table2\\" class=\\"tablesorter\\">
+    <thead>
+      <tr>
+        <th class=\\"header\\"><span class=\\"last-name\\">Last Name</span></th>
+        <th class=\\"header\\"><span class=\\"first-name\\">First Name</span></th>
+        <th class=\\"header\\"><span class=\\"email\\">Email</span></th>
+        <th class=\\"header\\"><span class=\\"dues\\">Due</span></th>
+        <th class=\\"header\\"><span class=\\"web-site\\">Web Site</span></th>
+        <th class=\\"header\\"><span class=\\"action\\">Action</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class=\\"last-name\\">Smith</td>
+        <td class=\\"first-name\\">John</td>
+        <td class=\\"email\\">jsmith@gmail.com</td>
+        <td class=\\"dues\\">$50.00</td>
+        <td class=\\"web-site\\">http://www.jsmith.com</td>
+        <td class=\\"action\\">
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td class=\\"last-name\\">Bach</td>
+        <td class=\\"first-name\\">Frank</td>
+        <td class=\\"email\\">fbach@yahoo.com</td>
+        <td class=\\"dues\\">$51.00</td>
+        <td class=\\"web-site\\">http://www.frank.com</td>
+        <td class=\\"action\\">
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td class=\\"last-name\\">Doe</td>
+        <td class=\\"first-name\\">Jason</td>
+        <td class=\\"email\\">jdoe@hotmail.com</td>
+        <td class=\\"dues\\">$100.00</td>
+        <td class=\\"web-site\\">http://www.jdoe.com</td>
+        <td class=\\"action\\">
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td class=\\"last-name\\">Conway</td>
+        <td class=\\"first-name\\">Tim</td>
+        <td class=\\"email\\">tconway@earthlink.net</td>
+        <td class=\\"dues\\">$50.00</td>
+        <td class=\\"web-site\\">http://www.timconway.com</td>
+        <td class=\\"action\\">
+          <a href=\\"#edit\\">edit</a>
+          <a href=\\"#delete\\">delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      </div>
+    </div>
+    <div id=\\"page-footer\\" class=\\"row\\">
+      <div class=\\"large-4 large-centered columns\\">
+        <hr>
+        <div style=\\"text-align: center;\\">Powered by <a target=\\"_blank\\" href=\\"http://elementalselenium.com/\\">Elemental Selenium</a></div>
+      </div>
+    </div>
+  
+
+</body></html>"
+`;
+
+exports[`Root Tests should open the 'The Internet Website' 1`] = `
+"<html class=\\"no-js\\" lang=\\"en\\"><!--<![endif]--><head>
+    <script src=\\"/js/vendor/298279967.js\\"></script>
+    <meta charset=\\"utf-8\\">
+    <meta name=\\"viewport\\" content=\\"width=device-width\\">
+    <title>The Internet</title>
+    <link href=\\"/css/app.css\\" rel=\\"stylesheet\\">
+    <link href=\\"/css/font-awesome.css\\" rel=\\"stylesheet\\">
+    <script src=\\"/js/vendor/jquery-1.11.3.min.js\\"></script>
+    <script src=\\"/js/vendor/jquery-ui-1.11.4/jquery-ui.js\\"></script>
+    <script src=\\"/js/foundation/foundation.js\\"></script><meta class=\\"foundation-mq-small\\"><meta class=\\"foundation-mq-medium\\"><meta class=\\"foundation-mq-large\\"><style></style>
+    <script src=\\"/js/foundation/foundation.alerts.js\\"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </head>
+  <body>
+    <div class=\\"row\\">
+      <div id=\\"flash-messages\\" class=\\"large-12 columns\\">
+      
+        
+      
+        
+      
+        
+      
+      </div>
+    </div>
+    <div class=\\"row\\">
+      <a href=\\"https://github.com/tourdedave/the-internet\\"><img style=\\"position: absolute; top: 0; right: 0; border: 0;\\" src=\\"/img/forkme_right_green_007200.png\\" alt=\\"Fork me on GitHub\\"></a>
+      <div id=\\"content\\" class=\\"large-12 columns\\">
+        <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
+<h1 class=\\"heading\\">Welcome to the-internet</h1>
+<h2>Available Examples</h2>
+<ul>
+  <li><a href=\\"/abtest\\">A/B Testing</a></li>
+  <li><a href=\\"/add_remove_elements/\\">Add/Remove Elements</a></li>
+  <li><a href=\\"/basic_auth\\">Basic Auth</a> (user and pass: admin)</li>
+  <li><a href=\\"/broken_images\\">Broken Images</a></li>
+  <li><a href=\\"/challenging_dom\\">Challenging DOM</a></li>
+  <li><a href=\\"/checkboxes\\">Checkboxes</a></li>
+  <li><a href=\\"/context_menu\\">Context Menu</a></li>
+  <li><a href=\\"/digest_auth\\">Digest Authentication</a> (user and pass: admin)</li>
+  <li><a href=\\"/disappearing_elements\\">Disappearing Elements</a></li>
+  <li><a href=\\"/drag_and_drop\\">Drag and Drop</a></li>
+  <li><a href=\\"/dropdown\\">Dropdown</a></li>
+  <li><a href=\\"/dynamic_content\\">Dynamic Content</a></li>
+  <li><a href=\\"/dynamic_controls\\">Dynamic Controls</a></li>
+  <li><a href=\\"/dynamic_loading\\">Dynamic Loading</a></li>
+  <li><a href=\\"/entry_ad\\">Entry Ad</a></li>
+  <li><a href=\\"/exit_intent\\">Exit Intent</a></li>
+  <li><a href=\\"/download\\">File Download</a></li>
+  <li><a href=\\"/upload\\">File Upload</a></li>
+  <li><a href=\\"/floating_menu\\">Floating Menu</a></li>
+  <li><a href=\\"/forgot_password\\">Forgot Password</a></li>
+  <li><a href=\\"/login\\">Form Authentication</a></li>
+  <li><a href=\\"/frames\\">Frames</a></li>
+  <li><a href=\\"/geolocation\\">Geolocation</a></li>
+  <li><a href=\\"/horizontal_slider\\">Horizontal Slider</a></li>
+  <li><a href=\\"/hovers\\">Hovers</a></li>
+  <li><a href=\\"/infinite_scroll\\">Infinite Scroll</a></li>
+  <li><a href=\\"/inputs\\">Inputs</a></li>
+  <li><a href=\\"/jqueryui/menu\\">JQuery UI Menus</a></li>
+  <li><a href=\\"/javascript_alerts\\">JavaScript Alerts</a></li>
+  <li><a href=\\"/javascript_error\\">JavaScript onload event error</a></li>
+  <li><a href=\\"/key_presses\\">Key Presses</a></li>
+  <li><a href=\\"/large\\">Large &amp; Deep DOM</a></li>
+  <li><a href=\\"/windows\\">Multiple Windows</a></li>
+  <li><a href=\\"/nested_frames\\">Nested Frames</a></li>
+  <li><a href=\\"/notification_message\\">Notification Messages</a></li>
+  <li><a href=\\"/redirector\\">Redirect Link</a></li>
+  <li><a href=\\"/download_secure\\">Secure File Download</a></li>
+  <li><a href=\\"/shadowdom\\">Shadow DOM</a></li>
+  <li><a href=\\"/shifting_content\\">Shifting Content</a></li>
+  <li><a href=\\"/slow\\">Slow Resources</a></li>
+  <li><a href=\\"/tables\\">Sortable Data Tables</a></li>
+  <li><a href=\\"/status_codes\\">Status Codes</a></li>
+  <li><a href=\\"/typos\\">Typos</a></li>
+  <li><a href=\\"/tinymce\\">WYSIWYG Editor</a></li>
+</ul>
+
+      </div>
+    </div>
+    <div id=\\"page-footer\\" class=\\"row\\">
+      <div class=\\"large-4 large-centered columns\\">
+        <hr>
+        <div style=\\"text-align: center;\\">Powered by <a target=\\"_blank\\" href=\\"http://elementalselenium.com/\\">Elemental Selenium</a></div>
+      </div>
+    </div>
+  
+
+</body></html>"
+`;
