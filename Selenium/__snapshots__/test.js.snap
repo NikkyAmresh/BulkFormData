@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Root Tests it should open the 'File Upload' link and upload the file upload.jpg 1`] = `
+"File Uploaded!
+upload.jpg
+Powered by Elemental Selenium"
+`;
+
+exports[`Root Tests it should open the link 'Checkboxes' and check and uncheck the 2 checkboxes respectively 1`] = `"true"`;
+
+exports[`Root Tests it should open the link 'Checkboxes' and check and uncheck the 2 checkboxes respectively 2`] = `null`;
+
+exports[`Root Tests it should open the link 'Checkboxes' and check and uncheck the 2 checkboxes respectively 3`] = `
+"Checkboxes
+checkbox 1
+checkbox 2
+Powered by Elemental Selenium"
+`;
+
+exports[`Root Tests should open the 'The Internet Website' 1`] = `
+"Welcome to the-internet
+Available Examples
+A/B Testing
+Add/Remove Elements
+Basic Auth (user and pass: admin)
+Broken Images
+Challenging DOM
+Checkboxes
+Context Menu
+Digest Authentication (user and pass: admin)
+Disappearing Elements
+Drag and Drop
+Dropdown
+Dynamic Content
+Dynamic Controls
+Dynamic Loading
+Entry Ad
+Exit Intent
+File Download
+File Upload
+Floating Menu
+Forgot Password
+Form Authentication
+Frames
+Geolocation
+Horizontal Slider
+Hovers
+Infinite Scroll
+Inputs
+JQuery UI Menus
+JavaScript Alerts
+JavaScript onload event error
+Key Presses
+Large & Deep DOM
+Multiple Windows
+Nested Frames
+Notification Messages
+Redirect Link
+Secure File Download
+Shadow DOM
+Shifting Content
+Slow Resources
+Sortable Data Tables
+Status Codes
+Typos
+WYSIWYG Editor
+Powered by Elemental Selenium"
+`;
