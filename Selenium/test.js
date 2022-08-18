@@ -7,7 +7,7 @@ chai.use(jestSnapshotPlugin());
 
 const { Builder, Key, By, until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
-// const service = new chrome.ServiceBuilder("./chromedriver1eebc8c");
+const service = new chrome.ServiceBuilder("./chromedriver1eebc8c");
 const firefox = require("selenium-webdriver/firefox");
 
 const screen = {
@@ -47,36 +47,39 @@ describe("Root Tests", async () => {
     ).toMatchSnapshot();
   });
 
-  it("it should open the 'Basic Auth' link and authenticate using credentials", async () => {
-    result = await TheIntenetServices.basicAuth(driver);
+  it("it should open the 'File Upload' link and upload the file upload.jpg", async () => {
+    result = await TheIntenetServices.uploadFile(driver);
     const link = await result.driver.getCurrentUrl();
-    assert.equal(baseUrl + "basic_auth", link, "Error getting the URL");
-    const text = await result.driver
-      .findElement(By.xpath('//*[@id="content"]/div/p'))
-      .getText();
-    assert.equal(
-      "Congratulations! You must have the proper credentials.",
-      text,
-      "Error authenticating"
-    );
+    assert.equal(baseUrl + "upload", link, "Error getting the URL");
     expect(
       await result.driver.findElement(By.xpath("/html")).getText()
     ).toMatchSnapshot();
+    const text = await result.driver
+      .findElement(By.xpath('//*[@id="content"]/div/h3'))
+      .getText();
+    assert.equal("File Uploaded!", text, "Error Uploading the file");
   });
 
-  it("it should open the link 'Sortable Data Tables' and sort the first table by column 'Website'", async () => {
-    result = await TheIntenetServices.clickOnSortableTableLink(driver);
+  it("it should open the link 'Checkboxes' and check and uncheck the 2 checkboxes respectively", async () => {
+    result = await TheIntenetServices.changeCheckboxes(driver);
 
     const newUrl = await result.driver.getCurrentUrl();
     const newTitle = await result.driver.getTitle();
 
-    assert.equal(baseUrl + "tables", newUrl, "Error getting the new URL");
+    const checkbox1 = await result.driver
+      .findElement(By.xpath('//*[@id="checkboxes"]/input[1]'))
+      .getAttribute("checked");
+    const checkbox2 = await result.driver
+      .findElement(By.xpath('//*[@id="checkboxes"]/input[2]'))
+      .getAttribute("checked");
+
+    assert.equal(baseUrl + "checkboxes", newUrl, "Error getting the new URL");
     assert.equal("The Internet", newTitle, "Error getting the Title");
-    expect(result.tableText).toMatchSnapshot();
+    expect(checkbox1).toMatchSnapshot();
+    expect(checkbox2).toMatchSnapshot();
     expect(
       await result.driver.findElement(By.xpath("/html")).getText()
     ).toMatchSnapshot();
   });
 });
-
 after(() => driver && driver.quit());
