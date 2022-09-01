@@ -32,51 +32,67 @@ before(async function () {
     .build();
 });
 
-const baseUrl = "https://the-internet.herokuapp.com/";
-
 var indexFunctions = require("./index");
 
+let data;
+
 describe("Root Tests", async () => {
-  let TheIntenetServices = indexFunctions.TheIntenetServices;
+  let BulkDataForm = indexFunctions.bulkDataFormServices;
 
-  it("should open the 'The Internet Website'", async () => {
-    result = await TheIntenetServices.open(driver);
-    assert.equal("The Internet", result.title, "Error getting the title");
-    expect(
-      await result.driver.findElement(By.xpath("/html")).getText()
-    ).toMatchSnapshot();
+  it("should open the 'Bulk Data Form Website'", async () => {
+    result = await BulkDataForm.open(driver);
+
+    data = await result.driver.executeScript(`let data = {}
+document.querySelectorAll("body > div > table.table.table-striped.table-responsive > tbody > tr").forEach(tr=>{
+    const el = tr.querySelectorAll('td')[1];
+    data[el.id] = el.innerText;
+})
+return data`);
+    expect(result.title).to.equal("Bulk Form Data");
   });
 
-  it("it should open the 'File Upload' link and upload the file upload.jpg", async () => {
-    result = await TheIntenetServices.uploadFile(driver);
-    const link = await result.driver.getCurrentUrl();
-    assert.equal(baseUrl + "upload", link, "Error getting the URL");
-    expect(
-      await result.driver.findElement(By.xpath("/html")).getText()
-    ).toMatchSnapshot();
-    const text = await result.driver
-      .findElement(By.xpath('//*[@id="content"]/div/h3'))
-      .getText();
-    assert.equal("File Uploaded!", text, "Error Uploading the file");
+  it("it should return the correct data for 6th row", async () => {
+    result = await BulkDataForm.getValueOfNthRow(driver, 6);
+    expect(data[result.id]).to.equal(result.data);
   });
 
-  it("it should open the link 'Checkboxes' and check and uncheck the 2 checkboxes respectively", async () => {
-    result = await TheIntenetServices.changeCheckboxes(driver);
+  it("it should return the correct data for 62th row", async () => {
+    result = await BulkDataForm.getValueOfNthRow(driver, 62);
+    expect(data[result.id]).to.equal(result.data);
+  });
 
-    const newUrl = await result.driver.getCurrentUrl();
-    const newTitle = await result.driver.getTitle();
+  it("it should return the correct data for 23rd row", async () => {
+    result = await BulkDataForm.getValueOfNthRow(driver, 23);
+    expect(data[result.id]).to.equal(result.data);
+  });
 
-    const checkbox1 = await result.driver
-      .findElement(By.xpath('//*[@id="checkboxes"]/input[1]'))
-      .getAttribute("checked");
-    const checkbox2 = await result.driver
-      .findElement(By.xpath('//*[@id="checkboxes"]/input[2]'))
-      .getAttribute("checked");
+  it("it should fill the 56th input of the form with the data from the table", async () => {
+    result = await BulkDataForm.fillTheForm(driver, 56);
+    const value = await result.driver.executeScript(
+      `return document.querySelector('#${result.id}').value`
+    );
+    expect(data[result.id.slice(3)]).to.equal(result.data);
+    expect(data[result.id.slice(3)]).to.equal(value);
+  });
+  it("it should fill the 7th input of the form with the data from the table", async () => {
+    result = await BulkDataForm.fillTheForm(driver, 7);
+    const value = await result.driver.executeScript(
+      `return document.querySelector('#${result.id}').value`
+    );
+    expect(data[result.id.slice(3)]).to.equal(result.data);
+    expect(data[result.id.slice(3)]).to.equal(value);
+  });
+  it("it should fill the 39th input of the form with the data from the table", async () => {
+    result = await BulkDataForm.fillTheForm(driver, 39);
+    const value = await result.driver.executeScript(
+      `return document.querySelector('#${result.id}').value`
+    );
+    expect(data[result.id.slice(3)]).to.equal(result.data);
+    expect(data[result.id.slice(3)]).to.equal(value);
+  });
 
-    assert.equal(baseUrl + "checkboxes", newUrl, "Error getting the new URL");
-    assert.equal("The Internet", newTitle, "Error getting the Title");
-    expect(checkbox1).toMatchSnapshot();
-    expect(checkbox2).toMatchSnapshot();
+  it("it should submit the form", async () => {
+    result = await BulkDataForm.fillAllDataAndSubmit(driver);
     expect(
       await result.driver.findElement(By.xpath("/html")).getText()
     ).toMatchSnapshot();

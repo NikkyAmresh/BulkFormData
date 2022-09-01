@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="8.1290" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-09-01T20:22:37" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Root Tests" timestamp="2022-09-01T20:22:38" tests="8" file="/Users/nikkyamresh/files/phpBulkData/seleniumBulkForm/Selenium/test.js" time="7.1370" failures="0">
+    <testcase name="Root Tests should open the &apos;Bulk Data Form Website&apos;" time="2.8770" classname="should open the &apos;Bulk Data Form Website&apos;">
+    </testcase>
+    <testcase name="Root Tests it should return the correct data for 6th row" time="0.0340" classname="it should return the correct data for 6th row">
+    </testcase>
+    <testcase name="Root Tests it should return the correct data for 62th row" time="0.0300" classname="it should return the correct data for 62th row">
+    </testcase>
+    <testcase name="Root Tests it should return the correct data for 23rd row" time="0.0290" classname="it should return the correct data for 23rd row">
+    </testcase>
+    <testcase name="Root Tests it should fill the 56th input of the form with the data from the table" time="1.7790" classname="it should fill the 56th input of the form with the data from the table">
+    </testcase>
+    <testcase name="Root Tests it should fill the 7th input of the form with the data from the table" time="0.7730" classname="it should fill the 7th input of the form with the data from the table">
+    </testcase>
+    <testcase name="Root Tests it should fill the 39th input of the form with the data from the table" time="0.5220" classname="it should fill the 39th input of the form with the data from the table">
+    </testcase>
+    <testcase name="Root Tests it should submit the form" time="1.0370" classname="it should submit the form">
+    </testcase>
+  </testsuite>
+</testsuites>
