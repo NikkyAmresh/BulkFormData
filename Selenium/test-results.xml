@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="10.0930" tests="8" failures="0">
-  <testsuite name="Root Suite" timestamp="2022-09-02T05:17:59" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="12.1350" tests="8" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-09-02T05:47:00" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="Root Tests" timestamp="2022-09-02T05:18:01" tests="8" file="/Users/nikkyamresh/files/phpBulkData/seleniumBulkForm/Selenium/test.js" time="8.8670" failures="0">
-    <testcase name="Root Tests should open the &apos;Bulk Data Form Website&apos;" time="2.8410" classname="should open the &apos;Bulk Data Form Website&apos;">
+  <testsuite name="Root Tests" timestamp="2022-09-02T05:47:01" tests="8" file="/Users/nikkyamresh/files/phpBulkData/seleniumBulkForm/Selenium/test.js" time="10.9180" failures="0">
+    <testcase name="Root Tests should open the &apos;Bulk Data Form Website&apos;" time="2.6100" classname="should open the &apos;Bulk Data Form Website&apos;">
     </testcase>
-    <testcase name="Root Tests it should return the correct data for 6th row" time="0.0650" classname="it should return the correct data for 6th row">
+    <testcase name="Root Tests it should return the correct data for 6th row" time="0.0640" classname="it should return the correct data for 6th row">
     </testcase>
-    <testcase name="Root Tests it should return the correct data for 62th row" time="0.0530" classname="it should return the correct data for 62th row">
+    <testcase name="Root Tests it should return the correct data for 62th row" time="0.0540" classname="it should return the correct data for 62th row">
     </testcase>
-    <testcase name="Root Tests it should return the correct data for 23rd row" time="0.0540" classname="it should return the correct data for 23rd row">
+    <testcase name="Root Tests it should return the correct data for 23rd row" time="0.0550" classname="it should return the correct data for 23rd row">
     </testcase>
-    <testcase name="Root Tests it should fill the 56th input of the form with the data from the table" time="2.3900" classname="it should fill the 56th input of the form with the data from the table">
+    <testcase name="Root Tests it should fill the 56th input of the form with the data from the table" time="2.2040" classname="it should fill the 56th input of the form with the data from the table">
     </testcase>
-    <testcase name="Root Tests it should fill the 7th input of the form with the data from the table" time="1.1320" classname="it should fill the 7th input of the form with the data from the table">
+    <testcase name="Root Tests it should fill the 7th input of the form with the data from the table" time="2.5900" classname="it should fill the 7th input of the form with the data from the table">
     </testcase>
-    <testcase name="Root Tests it should fill the 39th input of the form with the data from the table" time="1.0610" classname="it should fill the 39th input of the form with the data from the table">
+    <testcase name="Root Tests it should fill the 39th input of the form with the data from the table" time="1.9060" classname="it should fill the 39th input of the form with the data from the table">
     </testcase>
-    <testcase name="Root Tests it should submit the form" time="1.2110" classname="it should submit the form">
+    <testcase name="Root Tests it should submit the form" time="1.3760" classname="it should submit the form">
     </testcase>
   </testsuite>
 </testsuites>

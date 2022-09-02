@@ -26,7 +26,7 @@ localStorage['data'] = JSON.stringify(data)`);
         By.xpath("/html/body/div/table[2]/tbody/tr[" + n + "]/td[1]")
       )
       .getText();
-    const data = await driver
+    const token = await driver
       .findElement(
         By.xpath("/html/body/div/table[2]/tbody/tr[" + n + "]/td[2]")
       )
@@ -47,7 +47,7 @@ localStorage['data'] = JSON.stringify(data)`);
       id,
       num1,
       num2,
-      data,
+      token,
     };
   },
 
@@ -95,7 +95,7 @@ localStorage['data'] = JSON.stringify(data)`);
       remainder,
       n1,
       n2,
-      data: token,
+      token,
       driver,
     };
   },
